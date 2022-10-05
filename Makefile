@@ -12,4 +12,4 @@ monty: $(OBJ)
 Phony: cln
 
 cln:
-	rm -f *.o
+	rm -f *.o *.out
