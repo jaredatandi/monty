@@ -2,16 +2,16 @@
 #include "errors.h"
 #include <stdio.h>
 
-#define OK 1
-#define NO 0
-
-void run_cmd(int ac, char *av)
+void run_cmd(int ac, char *av, int line_number)
 {
-	size_t flag = 0;
+	int flag = 0;
 	char *line;
 	size_t len = 0;
 	FILE *fptr;
-	int sts = OK;
+
+	UNUSED(line_number);
+
+	/*void (*func)(stack_t **, unsigned int);*/
 
 	if (ac != 2)
 	{
@@ -25,24 +25,21 @@ void run_cmd(int ac, char *av)
 		fprintf(stderr, FILE_ERROR, av);
 	}
 
-	while (sts)
+	while (1)
 	{
 		flag = getline(&line, &len, fptr);
-		if (flag <= 0)
-		{
-			fprintf(stderr, "getline");
-			exit(EXIT_FAILURE);
-		}
-		sts = NO;
+		if (flag < 0)
+			break;
+
 	}
 }
 
 
 int main(int argc, char **argv)
 {
-	int ac = argc;
+	int ac = argc, line_number = 0;
 	char **av = argv;
 
-	run_cmd(ac, av[1]);
+	run_cmd(ac, av[1], line_number);
 	return 0;
 }

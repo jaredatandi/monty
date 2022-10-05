@@ -8,6 +8,8 @@
 #include <ctype.h>
 #include <string.h>
 
+#define UNUSED(x) (void)(x)
+
 
 
 /** Structs **/
@@ -48,5 +50,7 @@ typedef	struct args
 	char *file;
 	int line;
 } args_a;
+
+
 
 #endif /* end of include guard: STRUCTS_HJ*/
