@@ -34,7 +34,6 @@ void run_cmd(int ac, char *av)
 			exit(EXIT_FAILURE);
 		}
 		sts = NO;
-		printf("That was a success");
 	}
 }
 
