@@ -1,5 +1,14 @@
-#ifndef MONTY_H
-#define MONTY_H
+#ifndef STRUCTS_H 
+#define STRUCTS_H 
+#define _POSIX_C_SOURCE 200809L
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+
 
 /** Structs **/
 
@@ -33,4 +42,11 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-#endif /* end of include guard: MONTY_H */
+typedef	struct args
+{
+	int ac;
+	char *file;
+	int line;
+} args_a;
+
+#endif /* end of include guard: STRUCTS_HJ*/
