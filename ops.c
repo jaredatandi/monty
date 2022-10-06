@@ -52,8 +52,7 @@ stack_t *add_end(stack_t **h, const int n)
 	{
 		new->prev = NULL;
 		*h = new;
-		return (new);
-	}
+		return (new); }
 
 	while (tmp->next)
 		tmp = tmp->next;
