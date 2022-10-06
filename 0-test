@@ -1,12 +1,14 @@
-push 1
-push 333 33
-# push a a
-# push
-push 2
-push 3
-push -1
-push +2
-push -2
-push 8383
-
+push 23
+push 44
 pall
+
+
+
+0pall
+Push 34
+pall
+83Push
+push 
+push #83
+pall
+push 30
