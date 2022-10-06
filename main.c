@@ -18,14 +18,14 @@ void run_cmd(args_a *args)
 
 	if (args->ac != 2)
 	{
-		fprintf(stderr, USAGE);
+		dprintf(STDERR_FILENO, USAGE);
 		exit(EXIT_FAILURE);
 	}
 	/** Attempt to open the argument, update error if not file **/
 	infor.file = fopen(args->file, "r");
 	if (!infor.file)
 	{
-		fprintf(stderr, FILE_ERROR, args->file);
+		dprintf(STDERR_FILENO, FILE_ERROR, args->file);
 	}
 	while (1)
 	{
@@ -42,7 +42,7 @@ void run_cmd(args_a *args)
 		func = get_func(infor.words);
 		if (!func)
 		{
-			fprintf(stderr, UNKNOWN, args->line_number, infor.words[0]);
+			dprintf(STDERR_FILENO, UNKNOWN, args->line_number, infor.words[0]);
 			release_all(1);
 			exit(EXIT_FAILURE);
 		}
