@@ -1,12 +1,21 @@
 # Monty
 
 > A repo for data structures in C
+> Some of the concepts include inserting, poping, pushing, inserting, rotating, and handling mathematical operations
 
 ## Built With
 
 - C Language
+- Shell
 
-
+## Getting started
+To run the interpreter locally, follow the procedure below
+```
+git clone [this repo]
+cd monty
+./monty <file>
+```
+The file has to be a monty file with opcode instructions
 ## Authors
 
 👤 **Jared Atandi**
