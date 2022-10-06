@@ -87,7 +87,7 @@ size_t p_list(const stack_t *head)
 }
 
 /**
- * delet_node - deletes a node at a specific index
+ * delete_node - deletes a node at a specific index
  * @head: pointer to the list
  * @index: index of the node to delete
  *
@@ -115,7 +115,7 @@ int delete_node(stack_t **head, unsigned int index)
 		if (!temp)
 			return (0);
 	}
-	
+
 	temp->prev->next = temp->next;
 	if (temp->next)
 		temp->next->prev = temp->prev;
