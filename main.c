@@ -12,7 +12,7 @@ infor_s infor = INFOR_INIT;
 
 void run_cmd(args_a *args)
 {
-	int flag = 0;
+	int flg = 0;
 	size_t len = 0;
 	void (*func)(stack_t **, unsigned int);
 
@@ -26,12 +26,13 @@ void run_cmd(args_a *args)
 	if (!infor.file)
 	{
 		dprintf(STDERR_FILENO, FILE_ERROR, args->file);
+		exit(EXIT_FAILURE);
 	}
 	while (1)
 	{
 		args->line_number++;
-		flag = getline(&(infor.line), &len, infor.file);
-		if (flag < 0)
+		flg = getline(&(infor.line), &len, infor.file);
+		if (flg < 0)
 			break;
 		infor.words = tokens(infor.line);
 		if (infor.words[0] == NULL || infor.words[0][0] == '#')
