@@ -1,14 +1,10 @@
-push 23
-push 44
+push 32
+push 2
+push 333
+push 344
+pall
+swap
+pall
+add
 pall
 
-
-
-0pall
-Push 34
-pall
-83Push
-push 
-push #83
-pall
-push 30
