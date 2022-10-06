@@ -1,6 +1,5 @@
-#include "structs.h"
 #include "errors.h"
-#include "lists.h"
+#include "monty.h"
 
 void (*get_func(char **parsed))(stack_t **, unsigned int)
 {

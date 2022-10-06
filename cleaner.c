@@ -1,7 +1,6 @@
 #include <stddef.h>
-#include "structs.h"
 #include "errors.h"
-#include "lists.h"
+#include "monty.h"
 
 void release(char **args)
 {

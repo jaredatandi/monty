@@ -1,12 +1,12 @@
-#include "structs.h"
+#include "monty.h"
 #include "errors.h"
-#include "lists.h"
 
-void push_h(stack_t **stack, unsigned int line_number)
+extern infor_s infor;
+
+void push_h(stack_t **stack __attribute__((unused)), unsigned int line_number)
 {
 	int i;
 
-	UNUSED(stack);
 
 	if (infor.words[1] == NULL)
 	{

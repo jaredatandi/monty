@@ -1,15 +1,13 @@
-#ifndef STRUCTS_H 
-#define STRUCTS_H 
+#ifndef LISTS_H
+#define LISTS_HLISTS_H
+
 #define _POSIX_C_SOURCE 200809L
 
-#include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
-#include <ctype.h>
+#include <stdio.h>
 #include <string.h>
-
-#define UNUSED(x) (void)(x)
-
+#include <unistd.h>
+#include <ctype.h>
 
 
 /** Structs **/
@@ -61,5 +59,17 @@ typedef struct infr
 } infor_s;
 
 extern infor_s infor;
+
+#define INFOR_INIT {NULL, NULL, NULL, NULL, 0}
+
+void push_h(stack_t **stack, unsigned int line_number);
+int count_ws(char *str);
+char **tokens(char *str);
+void run_cmd(args_a *args);
+void (*get_func(char **parse))(stack_t **, unsigned int);
+void release(char **args);
+void release_all(int all);
+void free_stack(char *stack);
+
 
 #endif /* end of include guard: STRUCTS_H*/

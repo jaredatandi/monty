@@ -1,6 +1,5 @@
-#include "structs.h"
+#include "monty.h"
 #include "errors.h"
-#include "lists.h"
 
 int count_ws(char *str)
 {

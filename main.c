@@ -1,8 +1,14 @@
-#include "structs.h"
+#include "monty.h"
 #include "errors.h"
-#include "lists.h"
 
+#define _POSIX_C_SOURCE 200809L
+
+#include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
+
+
+infor_s infor = INFOR_INIT;
 
 void run_cmd(args_a *args)
 {
@@ -11,7 +17,6 @@ void run_cmd(args_a *args)
 	size_t len = 0;
 	void (*func)(stack_t **, unsigned int);
 
-	/*void (*func)(stack_t **, unsigned int);*/
 
 	if (args->ac != 2)
 	{
@@ -20,6 +25,7 @@ void run_cmd(args_a *args)
 	}
 
 	infor.file = fopen(args->file, "r");
+
 	if (!infor.file)
 	{
 		fprintf(stderr, FILE_ERROR, args->file);
