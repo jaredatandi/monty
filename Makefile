@@ -1,7 +1,8 @@
 CC=gcc
 CFLAGS=-Wall -Werror -Wextra -pedantic -std=c89
 DEPS = lists.h structs.h errors.h
-OBJ = main.o push_pall.o tokens.o get_func.o cleaner.o
+OBJ = main.o push_pall.o tokens.o get_func.o cleaner.o \
+      ops.o
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
