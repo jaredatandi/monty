@@ -15,7 +15,7 @@ void push_h(stack_t **stack, unsigned int line_number)
 	/** Check if any data is provided **/
 	if (infor.words[1] == NULL)
 	{
-		fprintf(stderr, PUSH_FAIL, line_number);
+		dprintf(STDERR_FILENO, PUSH_FAIL, line_number);
 		release_all(1);
 		exit(EXIT_FAILURE);
 	}
@@ -24,7 +24,7 @@ void push_h(stack_t **stack, unsigned int line_number)
 		/** Check for other ASCII chars**/
 		if (isalpha(infor.words[1][i]) != 0)
 		{
-			fprintf(stderr, PUSH_FAIL, line_number);
+			dprintf(STDERR_FILENO, PUSH_FAIL, line_number);
 			release_all(1);
 			exit(EXIT_FAILURE);
 		}
@@ -37,7 +37,7 @@ void push_h(stack_t **stack, unsigned int line_number)
 		new = add_end(stack, n);
 	if (!new)
 	{
-		fprintf(stderr, MALLOC_FAIL);
+		dprintf(STDERR_FILENO, MALLOC_FAIL);
 		release_all(1);
 		exit(EXIT_FAILURE);
 	}
