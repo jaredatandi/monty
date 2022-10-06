@@ -82,6 +82,9 @@ extern infor_s infor;
 void push_h(stack_t **stack, unsigned int line_number);
 void pall_h(stack_t **stack, unsigned int line_number);
 void pint_h(stack_t **stack, unsigned int line_number);
+void pop_h(stack_t **stack, unsigned int line_number);
+void swap_h(stack_t **stack, unsigned int line_number);
+void add_h(stack_t **stack, unsigned int line_number);
 
 /** Helpers **/
 int count_ws(char *str);
@@ -99,6 +102,8 @@ stack_t *add_top(stack_t **h, const int n);
 stack_t *add_end(stack_t **h, const int n);
 int delete_node(stack_t **head, unsigned int index);
 size_t p_list(const stack_t *head);
-
+size_t list_len(const stack_t *h);
+stack_t *insert_node(stack_t **h, unsigned int idx, int n);
+stack_t *get_node(stack_t *head, unsigned int index);
 
 #endif /* end of include guard: STRUCTS_H*/
