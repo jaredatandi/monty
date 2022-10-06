@@ -78,14 +78,23 @@ extern infor_s infor;
 
 #define INFOR_INIT {NULL, NULL, NULL, NULL, 0}
 
+/** Handlers **/
 void push_h(stack_t **stack, unsigned int line_number);
+
+/** Helpers **/
 int count_ws(char *str);
 char **tokens(char *str);
 void run_cmd(args_a *args);
 void (*get_func(char **parse))(stack_t **, unsigned int);
+
+/** Cleaners **/
 void release(char **args);
 void release_all(int all);
 void free_stack(char *stack);
 
+/** operations **/
+
+stack_t *add_top(stack_t **h, const int n);
+stack_t *add_end(stack_t **h, const int n);
 
 #endif /* end of include guard: STRUCTS_H*/
