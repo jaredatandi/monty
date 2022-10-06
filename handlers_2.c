@@ -60,3 +60,13 @@ void add_h(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 }
+/**
+ * nop_h - handles the nop instruction
+ * @stack: pointer to the stack
+ * @line_number: line number on the file
+ */
+void nop_h(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+}
