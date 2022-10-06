@@ -2,6 +2,7 @@
 #define MONTY_H
 
 #define _POSIX_C_SOURCE 200809L
+#define RED '\033[0;31m'
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -80,6 +81,7 @@ extern infor_s infor;
 
 /** Handlers **/
 void push_h(stack_t **stack, unsigned int line_number);
+void pall_h(stack_t **stack, unsigned int line_number);
 
 /** Helpers **/
 int count_ws(char *str);
@@ -93,8 +95,9 @@ void release_all(int all);
 void free_stack(char *stack);
 
 /** operations **/
-
 stack_t *add_top(stack_t **h, const int n);
 stack_t *add_end(stack_t **h, const int n);
+size_t p_list(const stack_t *head);
+
 
 #endif /* end of include guard: STRUCTS_H*/
