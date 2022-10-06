@@ -13,9 +13,10 @@ void (*get_func(char **parsed))(stack_t **, unsigned int)
 {
 	instruction_t func_arr[] = {
 		{"push", push_h},
+		{"pall", pall_h}
 	};
 
-	int funcs = 1, i;
+	int funcs = 2, i;
 
 	for (i = 0; i < funcs; ++i)
 	{
