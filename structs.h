@@ -48,9 +48,18 @@ typedef	struct args
 {
 	int ac;
 	char *file;
-	int line;
+	unsigned int line_number;
 } args_a;
 
+typedef struct infor
+{
+	char *line;
+	char **words;
+	stack_t *stack;
+	FILE *file;
+	int flag;
+} infor_s;
 
+extern infor_s infor;
 
 #endif /* end of include guard: STRUCTS_HJ*/

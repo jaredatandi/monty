@@ -12,7 +12,7 @@
 * used on a stack
 */
 
-void push(stack_t **stack, unsigned int line_number)
+void push_h(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new, *tmp;
 	char *n = strtok(NULL, "\n \t");
