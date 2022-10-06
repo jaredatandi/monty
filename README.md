@@ -1,10 +1,10 @@
-# Monty 
+# Monty
 
-> A repo for data structures in C 
+> A repo for data structures in C
 
 ## Built With
 
-- C Language 
+- C Language
 
 
 ## Authors

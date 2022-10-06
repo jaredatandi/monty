@@ -1,5 +1,5 @@
-#ifndef LISTS_H
-#define LISTS_HLISTS_H
+#ifndef MONTY_H
+#define MONTY_H
 
 #define _POSIX_C_SOURCE 200809L
 
@@ -42,6 +42,13 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct args - structure that will have the arguments from
+ * main
+ * @ac: the argument count
+ * @file: file from main
+ * @line_number: number of the current line in the file
+ */
 typedef	struct args
 {
 	int ac;
@@ -49,6 +56,15 @@ typedef	struct args
 	unsigned int line_number;
 } args_a;
 
+/**
+ * struct infr - extern data to be manipulated from
+ * individual functions
+ * @line: line from the file
+ * @words: parsed tokens from line
+ * @stack: pointer to the stack
+ * @file: file pointer
+ * @flag: flag to determine if its a stack or queue
+ */
 typedef struct infr
 {
 	char *line;

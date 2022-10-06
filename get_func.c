@@ -1,6 +1,14 @@
 #include "errors.h"
 #include "monty.h"
 
+/**
+ * get_func - returns the right function for the
+ * opcode operation
+ * @parsed: the parsed line from the bytecode file
+ *
+ * Return: a pointer to the function selected
+ */
+
 void (*get_func(char **parsed))(stack_t **, unsigned int)
 {
 	instruction_t func_arr[] = {

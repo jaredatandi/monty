@@ -1,7 +1,11 @@
 #include "monty.h"
 #include "errors.h"
 
-extern infor_s infor;
+/**
+ * push_h - a function to push to either stack or queue
+ * @stack: a struct with stack infor
+ * @line_number: line number on the file
+ */
 
 void push_h(stack_t **stack __attribute__((unused)), unsigned int line_number)
 {

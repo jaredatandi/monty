@@ -2,6 +2,11 @@
 #include "errors.h"
 #include "monty.h"
 
+/**
+ * release - frees a malloced list
+ * @args: a vector array of arguments
+ */
+
 void release(char **args)
 {
 	int i;
@@ -14,6 +19,10 @@ void release(char **args)
 	free(args);
 }
 
+/**
+ * release_all - frees a list or queue
+ * @all: a flag to determine what to free
+ */
 
 void release_all(int all)
 {

@@ -4,7 +4,7 @@ DEPS = lists.h structs.h errors.h
 OBJ = main.o push_pall.o tokens.o get_func.o cleaner.o
 
 %.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS) 
+	$(CC) -c -o $@ $< $(CFLAGS)
 
 monty: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)

@@ -1,5 +1,5 @@
 #ifndef ERRORS_H
-#define ERRORS_HERRORS_H
+#define ERRORS_H
 
 
 #define USAGE "USAGE: monty file\n"

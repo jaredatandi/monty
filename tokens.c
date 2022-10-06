@@ -1,6 +1,13 @@
 #include "monty.h"
 #include "errors.h"
 
+/**
+ * count_ws - a helper function to count the
+ * number of words in line
+ * @str: the line
+ * Return: the number of words
+ */
+
 int count_ws(char *str)
 {
 	int count, w, flag;
@@ -20,6 +27,13 @@ int count_ws(char *str)
 	}
 	return (w);
 }
+
+/**
+ * tokens - a function to tokenize the line read
+ * from a file
+ * @str: the line read from the file
+ * Return: pointer to an arrays with tokens
+ */
 
 char **tokens(char *str)
 {

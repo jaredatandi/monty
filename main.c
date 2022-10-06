@@ -1,14 +1,15 @@
 #include "monty.h"
 #include "errors.h"
-
-#define _POSIX_C_SOURCE 200809L
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>
 
-
 infor_s infor = INFOR_INIT;
+
+/**
+ * run_cmd - a helper function to main
+ * @args: a struct pointer to arguements from main
+ */
 
 void run_cmd(args_a *args)
 {
@@ -25,7 +26,6 @@ void run_cmd(args_a *args)
 	}
 
 	infor.file = fopen(args->file, "r");
-
 	if (!infor.file)
 	{
 		fprintf(stderr, FILE_ERROR, args->file);
@@ -43,6 +43,7 @@ void run_cmd(args_a *args)
 			release_all(0);
 			continue;
 		}
+
 		func = get_func(infor.words);
 		if (!func)
 		{
@@ -55,17 +56,21 @@ void run_cmd(args_a *args)
 	}
 	release_all(1);
 }
-
+/**
+ * main - the entry point to the program
+ * @argc: argument count
+ * @argv: vector array of the arguments
+ * Return: 0 success, 1 otherwise
+ */
 
 int main(int argc, char **argv)
 {
-
 	args_a args;
-	
+
 	args.ac = argc;
 	args.file = argv[1];
 	args.line_number = 0;
-
 	run_cmd(&args);
-	return 0;
+
+	return (0);
 }
