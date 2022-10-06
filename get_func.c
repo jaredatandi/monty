@@ -13,10 +13,14 @@ void (*get_func(char **parsed))(stack_t **, unsigned int)
 {
 	instruction_t func_arr[] = {
 		{"push", push_h},
-		{"pall", pall_h}
+		{"pall", pall_h},
+		{"pint", pint_h},
+		{"pop", pop_h},
+		{"swap", swap_h},
+		{"add", add_h}
 	};
 
-	int funcs = 2, i;
+	int funcs = 6, i;
 
 	for (i = 0; i < funcs; ++i)
 	{
