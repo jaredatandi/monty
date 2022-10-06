@@ -44,3 +44,15 @@ void push_h(stack_t **stack, unsigned int line_number)
 	}
 }
 
+/**
+ * pall_handler - handles the pall instruction
+ * @stack: a struct pointer to the stack to push
+ * @line_number: line number on the file
+ */
+void pall_h(stack_t **stack, unsigned int line_number)
+{
+	(void)line_number;
+	if (*stack)
+		p_list(*stack);
+}
+
