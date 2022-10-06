@@ -64,4 +64,24 @@ stack_t *add_end(stack_t **h, const int n)
 	return (new);
 }
 
+/**
+ * p_list - prints a linked list
+ * @head: pointer to the list
+ *
+ * Return: number of in the list
+ */
+size_t p_list(const stack_t *head)
+{
+	size_t nodes = 0;
 
+	if (!head)
+		return (0);
+	while (head)
+	{
+		printf("%d\n", head->n);
+		head = head->next;
+		nodes++;
+	}
+
+	return (nodes);
+}
