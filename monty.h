@@ -2,7 +2,6 @@
 #define MONTY_H
 
 #define _POSIX_C_SOURCE 200809L
-#define RED '\033[0;31m'
 
 #include <stdlib.h>
 #include <stdio.h>

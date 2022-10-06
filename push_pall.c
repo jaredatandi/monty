@@ -21,8 +21,7 @@ void push_h(stack_t **stack, unsigned int line_number)
 	}
 	for (i = 0; i < infor.words[1][i]; i++)
 	{
-		/** Check for other ASCII chars other than
-		 * Words and numbers **/
+		/** Check for other ASCII chars**/
 		if (isalpha(infor.words[1][i]) != 0)
 		{
 			fprintf(stderr, PUSH_FAIL, line_number);
@@ -33,7 +32,7 @@ void push_h(stack_t **stack, unsigned int line_number)
 
 	n = atoi(infor.words[1]);
 	if (infor.flag == 0)
-		new = add_top(stack, n); 
+		new = add_top(stack, n);
 	else if (infor.flag == 1)
 		new = add_end(stack, n);
 	if (!new)
@@ -45,7 +44,7 @@ void push_h(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pall_handler - handles the pall instruction
+ * pall_h - handles the pall instruction
  * @stack: a struct pointer to the stack to push
  * @line_number: line number on the file
  */
