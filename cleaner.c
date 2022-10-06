@@ -20,7 +20,8 @@ void release(char **args)
 }
 
 /**
- * release_all - frees a list or queue
+ * release_all - frees a list or queue based on the
+ * content of the infor struct
  * @all: a flag to determine what to free
  */
 
