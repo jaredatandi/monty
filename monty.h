@@ -115,6 +115,7 @@ size_t list_len(const stack_t *h);
 stack_t *insert_node(stack_t **h, unsigned int idx, int n);
 stack_t *get_node(stack_t *head, unsigned int index);
 void nop_h(stack_t **stack, unsigned int line_number);
+void sub_h(stack_t **stack, unsigned int line_number);
 
 
 #endif /* end of include guard: STRUCTS_H*/
