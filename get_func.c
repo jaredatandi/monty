@@ -18,10 +18,11 @@ void (*get_func(char **parsed))(stack_t **, unsigned int)
 		{"pop", pop_h},
 		{"swap", swap_h},
 		{"add", add_h},
-		{"nop", nop_h}
+		{"nop", nop_h},
+		{"sub", sub_h}
 	};
 
-	int funcs = 7, i;
+	int funcs = 8, i;
 
 	for (i = 0; i < funcs; ++i)
 	{
