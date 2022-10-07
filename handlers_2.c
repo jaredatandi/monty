@@ -70,3 +70,33 @@ void nop_h(stack_t **stack, unsigned int line_number)
 	(void)stack;
 	(void)line_number;
 }
+/**
+ * sub_h - handles subtractions instructions
+ * @stack: pointer to the stack
+ * @line_number: line number on file
+ */
+void sub_h(stack_t **stack, unsigned int line_number)
+{
+	int res = 0;
+	stack_t *node = NULL;
+	stack_t *node_1 = get_node(*stack, 0);
+	stack_t *node_2 = get_node(*stack, 1);
+
+	if (list_len(*stack) < 2)
+	{
+		dprintf(STDERR_FILENO, SUB_FAIL, line_number);
+		release_all(1);
+		exit(EXIT_FAILURE);
+	}
+	res = node_1->n - node_2->n;
+	delete_node(stack, 0);
+	delete_node(stack, 0);
+	node = add_top(stack, res);
+	
+	if (!node)
+	{
+		dprintf(STDERR_FILENO, MALLOC_FAIL);
+		release_all(1);
+		exit(EXIT_FAILURE);
+	}
+}
