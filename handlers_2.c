@@ -100,6 +100,11 @@ void sub_h(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 }
+/**
+ * div_h - division operations handling function
+ * @stack: pointer to the start of stack
+ * @line_number: line number on file
+ */
 void div_h(stack_t **stack, unsigned int line_number)
 {
 	int result = 0;
