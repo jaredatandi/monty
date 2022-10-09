@@ -127,7 +127,7 @@ void div_h(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	result = node_0->n / node_1->n;
+	result = node_1->n / node_0->n;
 	delete_node(stack, 0);
 	delete_node(stack, 0);
 	node = add_top(stack, result);
