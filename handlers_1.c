@@ -22,7 +22,7 @@ void push_h(stack_t **stack, unsigned int line_number)
 	for (i = 0; i < infor.words[1][i]; i++)
 	{
 		/** Check for other ASCII chars**/
-		if (isalpha(infor.words[1][i]) != 0)
+		if (isdigit(infor.words[1][i]) == 0)
 		{
 			dprintf(STDERR_FILENO, PUSH_FAIL, line_number);
 			release_all(1);
