@@ -76,3 +76,27 @@ void mod_h(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 }
+/**
+ * pchar_h - handle pchar operation
+ * @stack: pointer to stack
+ * @line_number: line number on the file
+ */
+void pchar_h(stack_t **stack, unsigned int line_number)
+{
+	stack_t *node;
+
+	if (!*stack)
+	{
+		dprintf(STDERR_FILENO, PCHAR_FAIL, line_number);
+		release_all(1);
+		exit(EXIT_FAILURE);
+	}
+	node = get_node(*stack, 0);
+	if (node->n > 127 || node->n < 0)
+	{
+		dprintf(STDERR_FILENO, PCHAR_RANGE, line_number);
+		release_all(1);
+		exit(EXIT_FAILURE);
+	}
+	exit(EXIT_FAILURE);
+}
