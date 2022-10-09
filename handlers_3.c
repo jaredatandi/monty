@@ -59,6 +59,13 @@ void mod_h(stack_t **stack, unsigned int line_number)
 
 	node_0 = get_node(*stack, 0);
 	node_1 = get_node(*stack, 1);
+
+	if (node_0->n == 0)
+	{
+		dprintf(STDERR_FILENO, DIV_ZERO, line_number);
+		release_all(1);
+		exit(EXIT_FAILURE);
+	}
 	
 	res = node_1->n % node_0->n;
 	node = add_top(stack, res); 
