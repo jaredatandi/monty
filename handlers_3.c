@@ -38,8 +38,8 @@ void mul_h(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * mod_h - 
- * @stac: pointer to the stack
+ * mod_h - handles mod instruction
+ * @stack: pointer to the stack
  * @line_number: line number on file
  * Description: calculates the remainder of
  * div operation
@@ -48,8 +48,8 @@ void mod_h(stack_t **stack, unsigned int line_number)
 {
 	int res;
 	stack_t *node, *node_0, *node_1;
-	node = NULL;
 
+	node = NULL;
 	if (list_len(*stack) < 2)
 	{
 		dprintf(STDERR_FILENO, DIV_ZERO, line_number);
@@ -66,9 +66,9 @@ void mod_h(stack_t **stack, unsigned int line_number)
 		release_all(1);
 		exit(EXIT_FAILURE);
 	}
-	
+
 	res = node_1->n % node_0->n;
-	node = add_top(stack, res); 
+	node = add_top(stack, res);
 	if (!node)
 	{
 		dprintf(STDERR_FILENO, MALLOC_FAIL);
@@ -101,7 +101,7 @@ void pchar_h(stack_t **stack, unsigned int line_number)
 	exit(EXIT_FAILURE);
 }
 /**
- * queue_h - handles the queue instruction 
+ * queue_h - handles the queue instruction
  * @stack: pointer to stack
  * @line_number: line number of the file
  * Description: sets the flag to determine if
