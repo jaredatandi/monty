@@ -100,3 +100,29 @@ void pchar_h(stack_t **stack, unsigned int line_number)
 	}
 	exit(EXIT_FAILURE);
 }
+/**
+ * queue_h - handles the queue instruction 
+ * @stack: pointer to stack
+ * @line_number: line number of the file
+ * Description: sets the flag to determine if
+ * the data structure is a stack or queue
+ */
+void queue_h(stack_t **stack, unsigned int line_number)
+{
+	UNUSED(stack);
+	UNUSED(line_number);
+	infor.flag = 1;
+}
+/**
+ * stack_h - handles the stack instruction
+ * @stack: pointer to stack
+ * @line_number: line number of the file
+ * Description: sets the flag to determine if
+ * the data structure is a stack or queue
+ */
+void stack_h(stack_t **stack, unsigned int line_number)
+{
+	UNUSED(stack);
+	UNUSED(line_number);
+	infor.flag = 0;
+}
