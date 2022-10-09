@@ -109,8 +109,7 @@ void div_h(stack_t **stack, unsigned int line_number)
 {
 	int result = 0;
 	stack_t *node = NULL;
-	stack_t *node_0 = get_node(*stack, 0);
-	stack_t *node_1 = get_node(*stack, 1);
+	stack_t *node_0, *node_1;
 
 	if (list_len(*stack) < 2)
 	{
@@ -118,6 +117,9 @@ void div_h(stack_t **stack, unsigned int line_number)
 		release_all(1);
 		exit(EXIT_FAILURE);
 	}
+
+	node_0 = get_node(*stack, 0);
+	node_1 = get_node(*stack, 1);
 	if (node_0->n == 0)
 	{
 		dprintf(STDERR_FILENO, DIV_ZERO, line_number);
