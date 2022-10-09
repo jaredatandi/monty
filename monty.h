@@ -119,6 +119,7 @@ void sub_h(stack_t **stack, unsigned int line_number);
 void div_h(stack_t **stack, unsigned int line_number);
 void mul_h(stack_t **stack, unsigned int line_number);
 void mod_h(stack_t **stack, unsigned int line_number);
+void pchar_h(stack_t **stack, unsigned int line_number);
 
 
 #endif /* end of include guard: STRUCTS_H*/
