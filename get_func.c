@@ -21,10 +21,11 @@ void (*get_func(char **parsed))(stack_t **, unsigned int)
 		{"nop", nop_h},
 		{"sub", sub_h},
 		{"div", div_h},
-		{"mul", mul_h}
+		{"mul", mul_h},
+		{"mod", mod_h}
 	};
 
-	int funcs = 10, i;
+	int funcs = 11, i;
 
 	for (i = 0; i < funcs; ++i)
 	{
