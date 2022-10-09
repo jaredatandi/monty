@@ -13,5 +13,5 @@ monty: $(OBJ)
 Phony: cln
 
 
-cln:
+cl:
 	rm -f *.o *.out
