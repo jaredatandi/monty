@@ -19,6 +19,6 @@
 #define PCHAR_FAIL "L%u: can't pchar, stack empty\n"
 #define PCHAR_RANGE "L%u: can't pchar, value out of range\n"
 
-#define UNUSED(x) void(x)
+#define UNUSED(x) (void)x
 
 #endif /* ERRORS_H */
