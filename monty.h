@@ -72,7 +72,7 @@ typedef struct infr
 	char **words;
 	stack_t *stack;
 	FILE *file;
-	int flag;
+	int flag: 3;
 } infor_s;
 
 extern infor_s infor;
@@ -120,6 +120,8 @@ void div_h(stack_t **stack, unsigned int line_number);
 void mul_h(stack_t **stack, unsigned int line_number);
 void mod_h(stack_t **stack, unsigned int line_number);
 void pchar_h(stack_t **stack, unsigned int line_number);
+void queue_h(stack_t **stack, unsigned int line_number);
+void stack_h(stack_t **stack, unsigned int line_number);
 
 
 #endif /* end of include guard: STRUCTS_H*/
