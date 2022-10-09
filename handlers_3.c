@@ -67,7 +67,7 @@ void mod_h(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	
-	res = node_1->n % node_0->n;
+	res = node_0->n % node_1->n;
 	node = add_top(stack, res); 
 	if (!node)
 	{
