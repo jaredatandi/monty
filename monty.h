@@ -117,6 +117,7 @@ stack_t *get_node(stack_t *head, unsigned int index);
 void nop_h(stack_t **stack, unsigned int line_number);
 void sub_h(stack_t **stack, unsigned int line_number);
 void div_h(stack_t **stack, unsigned int line_number);
+void mul_h(stack_t **stack, unsigned int line_number);
 
 
 #endif /* end of include guard: STRUCTS_H*/
